@@ -1,13 +1,15 @@
 ---
 title: Routing
+title: Маршрутизация
 description: Nuxt.js use the file-system to generate the routes of your web applications.
+description: Nuxt.js использует структуру файлов вашего проекта чтобы построить маршруты для вашего приложения
 ---
 
 > Nuxt.js automatically generates the [vue-router](https://github.com/vuejs/vue-router) configuration based on your file tree of Vue files inside the `pages` directory.
 
-## Basic Routes
+## Базовая маршрутизация
 
-This file tree:
+Из следующей структуры файлов:
 
 ```bash
 pages/
@@ -17,7 +19,7 @@ pages/
 --| index.vue
 ```
 
-will automatically generate:
+будут автоматически сгенерированы маршруты:
 
 ```js
 router: {
@@ -41,11 +43,11 @@ router: {
 }
 ```
 
-## Dynamic Routes
+## Динамическая маршрутизация
 
 To define a dynamic route with a param, you need to define a .vue file OR a directory **prefixed by an underscore**.
 
-This file tree:
+Из следующей структуры файлов:
 
 ```bash
 pages/
@@ -57,7 +59,7 @@ pages/
 --| index.vue
 ```
 
-will automatically generate:
+будут автоматически сгенерированы маршруты:
 
 ```js
 router: {
@@ -109,15 +111,15 @@ If the validate method does not return `true`, Nuxt.js will automatically load t
 
 More information about the validate method: [API Pages validate](/api/pages-validate)
 
-## Nested Routes
+## Вложенные маршруты
 
 Nuxt.js lets you create nested route by using the children routes of vue-router.
 
 To define the parent component of a nested route, you need to create a Vue file with the **same name as the directory** which contain your children views.
 
-<p class="Alert Alert--info"><b>Warning:</b> don't forget to write `<nuxt-child/>` inside the parent component (<code>.vue</code> file).</p>
+<p class="Alert Alert--info"><b>Warning:</b> Не забудьте добавить `<nuxt-child/>` внутри родительского компонента (в файле <code>.vue</code>).</p>
 
-This file tree:
+Из следующей структуры файлов:
 
 ```bash
 pages/
@@ -127,7 +129,7 @@ pages/
 --| users.vue
 ```
 
-will automatically generate:
+будут автоматически сгенерированы маршруты:
 
 ```js
 router: {
